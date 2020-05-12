@@ -1,0 +1,89 @@
+.slider__nav
+    background-color: rgba(0, 0, 0, .30)
+    border:
+        radius: 50%
+        width: 0
+    height: 12px
+    padding: 0
+    width: 12px
+
+    @media (min-width: $screen-sm)
+        height: 13px
+        width: 13px
+
+    @media (min-width: $screen-md)
+        height: 14px
+        width: 14px
+
+    @media (min-width: $screen-lg)
+        height: 15px
+        width: 15px
+
+    @media (min-width: $screen-xl)
+        height: 16px
+        width: 16px
+
+
+    &.tns-nav-active
+        height: 24px
+        width: 24px
+
+        @media (min-width: $screen-sm)
+            height: 26px
+            width: 26px
+
+        @media (min-width: $screen-md)
+            height: 28px
+            width: 28px
+
+        @media (min-width: $screen-lg)
+            height: 30px
+            width: 30px
+
+        @media (min-width: $screen-xl)
+            height: 33px
+            width: 33px
+
+        &::before
+            background-color: #52bdd2
+            border-radius: 50%
+            content: ''
+            display: block
+            margin: 8px
+            height: 8px
+            width: 8px
+
+            @media (min-width: $screen-sm)
+                margin: 8.6px
+                height: 8.6px
+                width: 8.6px
+
+            @media (min-width: $screen-md)
+                margin: 9.3px
+                height: 9.3px
+                width: 9.3px
+
+            @media (min-width: $screen-lg)
+                margin: 10px
+                height: 10px
+                width: 10px
+
+            @media (min-width: $screen-xl)
+                margin: 11px
+                height: 11px
+                width: 11px
+
+    &:not(:last-of-type)
+        margin-right: 16px
+
+        @media (min-width: $screen-sm)
+            margin-right: 17px
+
+        @media (min-width: $screen-md)
+            margin-right: 18px
+
+        @media (min-width: $screen-lg)
+            margin-right: 19px
+
+        @media (min-width: $screen-xl)
+            margin-right: 20px

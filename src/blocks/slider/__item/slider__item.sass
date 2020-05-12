@@ -1,0 +1,30 @@
+.slider__item
+    align-items: center
+    background-color: rgba(17, 17, 17, .58)
+    display: inline-flex !important
+    height: 577px
+    position: relative
+
+    img
+        bottom: 0
+        height: 100%
+        left: 0
+        object-fit: cover
+        object-position: center
+        position: absolute
+        right: 0
+        top: 0
+        width: 100%
+        z-index: -1
+
+    @media (min-width: $screen-sm)
+        height: 636px
+
+    @media (min-width: $screen-md)
+        height: 705px
+
+    @media (min-width: $screen-lg)
+        height: 774px
+
+    @media (min-width: $screen-xl)
+        height: 843px

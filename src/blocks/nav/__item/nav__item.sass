@@ -1,0 +1,25 @@
+.nav__item
+    position: relative
+    max-width: 150px
+    width: 100%
+
+    &:not(:last-child)
+        margin-bottom: 24px
+
+        @media (min-width: $screen-lg)
+            margin:
+                bottom: 0
+                right: 24px
+
+        @media (min-width: $screen-xl)
+            margin-right: 36px
+
+        @media (min-width: 1366px)
+            margin-right: 48px
+
+    &:hover
+        & > .nav__link
+            color: $color-blue
+
+        & > .submenu
+            display: block

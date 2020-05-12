@@ -1,0 +1,61 @@
+doctype html
+html(lang='ru')
+    
+    block variables
+        
+    head
+        
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            
+        link(href='main.css', rel='stylesheet')
+            
+        script(src='https://api-maps.yandex.ru/2.1/?apikey=84bda003-17be-42cf-8e47-f7416d9f96f2&lang=ru_RU' type='text/javascript')
+            
+        block links
+            
+    body.page(class=bodyClass)
+        
+        // popup start
+        include ./blocks/popup/popup.pug
+        // popup end
+        
+        // scroll-top start
+        include ./blocks/scroll-top/scroll-top.pug
+        // scroll-top end
+        
+        // header start
+        include ./blocks/header/header.pug
+        // header end
+        
+        // nav start
+        include ./blocks/nav/nav.pug
+        // nav end
+        
+        mixin breadcrumbs(heading, ...links)
+            .breadcrumbs
+                .container
+                    .row
+                        .col-xs-12
+                            h1.breadcrumbs__heading= heading
+                            ul.breadcrumbs__list
+                                each link in links
+                                    li.breadcrumbs__item
+                                        a.breadcrumbs__link(href=link.href)= link.name
+                                li.breadcrumbs__item= heading
+                            
+        if bodyClass != 'home'                
+            // breadcrumbs start
+            block breadcrumbs
+            // breadcrumbs end
+        
+        // main start
+        main
+            block main
+        // main end
+        
+        // footer start
+        include ./blocks/footer/footer.pug
+        // footer end
+        
+        script(src='main.js')

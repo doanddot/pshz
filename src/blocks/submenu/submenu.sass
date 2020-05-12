@@ -1,0 +1,30 @@
+.submenu
+    display: none
+    left: 0
+    padding:
+        bottom: 12px
+        top: 23px
+    top: 16px
+
+    @media (min-width: $screen-lg)
+        padding-bottom: 0
+        position: absolute
+
+    &::before
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-bottom: 5px solid #fff
+        content: ''
+        height: 0
+        display: none
+        margin:
+            left: 27px
+            top: -4px
+        width: 0
+
+        @media (min-width: $screen-lg)
+            display: block
+
+@import './__item/submenu__item'
+@import './__link/submenu__link'
+@import './__list/submenu__list'

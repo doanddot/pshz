@@ -1,0 +1,21 @@
+.quality__item
+    color: #fff
+    display: flex
+    font:
+        size: 14px
+        weight: 600
+    line-height: 1.5714285714
+
+    &::before
+        background:
+            image: url('../../blocks/quality/__item/quality__item.png')
+            size: cover
+        content: ''
+        display: inline-flex
+        height: 34px
+        margin-right: 32px
+        min-width: 34px
+        width: 34px
+
+    &:not(:first-of-type)
+        margin-top: 64px

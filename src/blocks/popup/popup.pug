@@ -1,0 +1,13 @@
+div.popup.popup_closed
+    div.popup__dialog
+        button.popup__close
+            img(src=require('./__close/popup__close.png').default width=38)
+        span.popup__heading Оставить заявку
+        form.form.popup__form
+            div.form__field
+                input.form__input.popup__input(id='name' required type='name')
+                label.form__label(for='name') Ваше имя
+            div.form__field
+                input.form__input.popup__input(id='tel' required type='tel')
+                label.form__label(for='tel') Контактный номер
+            input.button.form__submit.popup__submit(type='submit' value='Отправить')

@@ -1,0 +1,10 @@
+section.quality
+    img.quality__background(src=require('../../assets/quality.png').default)
+    div.container
+        div.row
+            div.col-xs-12.col-md-6.quality__column.quality__column_white
+                h2.heading-2.quality__heading Высокое качество продукции
+            div.col-xs-12.col-md-6.quality__column.quality__column_black
+                ul.quality__list
+                    each item in [ 'Повышенная механическая прочность, однородная структура,стандартная форма зерна', 'Отсутствие вредных примесей, подтверждённое гигиеническими сертификатами', 'Низкая электропроводность щебня фракций 25-60', ]
+                        li.quality__item= item

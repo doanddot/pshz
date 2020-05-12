@@ -1,0 +1,20 @@
+.quality__column_white
+    background-color: rgba(233, 240, 243, .9)
+
+    &::after
+        border:
+            top: 12.5px solid transparent
+            left: 11px solid rgba(233, 240, 243, .9)
+            bottom: 12.5px solid transparent
+        bottom: -18px
+        content: ''
+        height: 0
+        position: absolute
+        transform: rotate(90deg)
+        width: 0
+        z-index: 1
+
+        @media (min-width: $screen-md)
+            bottom: unset
+            right: -11px
+            transform: unset

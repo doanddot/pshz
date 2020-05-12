@@ -1,0 +1,78 @@
+.slider__control
+    border:
+        color: #fff
+        radius: 50%
+        style: solid
+        width: 3px
+    cursor: pointer
+    height: 60px
+    outline: unset
+    opacity: .4
+    padding:
+        bottom: 14px
+        top: 16px
+    position: absolute
+    z-index: 1
+    width: 60px
+
+    @media (min-width: $screen-lg) and (max-width: 1199px)
+        bottom: 63px
+        margin-bottom: -13px
+        right: calc(((100vw - 960px) / 2) + 16px)
+
+    @media (min-width: $screen-xl) and (max-width: 1331px)
+        bottom: 72px
+        margin-bottom: -13px
+        right: calc(((100vw - 1140px) / 2) + 16px)
+
+    @media (min-width: 1332px)
+        margin-top: -30px
+        top: 50%
+
+    img
+        width: 15px
+
+    &-prev
+        display: none
+        padding:
+            left: 18px
+            right: 21px
+
+        @media (min-width: $screen-lg)
+            display: block
+            margin-right: 76px
+
+        @media (min-width: 1332px)
+            left: 0
+            margin-left: 18px
+
+        @media (min-width: 1404px)
+            margin-left: 36px
+
+        @media (min-width: 1562px)
+            margin-left: 71px
+
+        img
+            transform: rotate(180deg)
+
+    &-next
+        display: none
+        padding:
+            left: 21px
+            right: 18px
+
+        @media (min-width: $screen-lg)
+            display: block
+
+        @media (min-width: 1332px)
+            right: 0
+            margin-right: 18px
+
+        @media (min-width: 1404px)
+            margin-right: 36px
+
+        @media (min-width: 1562px)
+            margin-right: 71px
+
+    &:hover
+        opacity: 1

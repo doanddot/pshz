@@ -1,0 +1,21 @@
+.nav__list
+    align-items: center
+    background-color: white
+    display: none
+    flex-direction: column
+    justify-content: center
+    position: fixed
+
+    bottom: 0
+    right: 0
+    top: 0
+    left: 0
+
+    @media (min-width: $screen-lg)
+        background-color: transparent
+        display: flex
+        flex-direction: row
+        position: static
+
+    &_open
+        display: flex

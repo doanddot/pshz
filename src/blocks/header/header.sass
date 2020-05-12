@@ -1,0 +1,42 @@
+@import '__action/header__action'
+@import '__address/header__address'
+@import '__phone/header__phone'
+@import '__price/header__price'
+@import '__vacancies/header__vacancies'
+@import '__vacancies/_active/header__vacancies_active'
+@import '__wrap/header__wrap'
+
+.header
+    align-items: center
+    background-color: $color-blue-light
+    display: flex
+    position: sticky
+    top: 0
+    z-index: 3
+
+    &__address,
+    &__phone
+        align-items: center
+        color: #1d1d1d
+        font:
+            size: 13px
+            weight: 500
+
+        @media (min-width: $screen-sm)
+            font-size: 14px
+
+        @media (min-width: $screen-md)
+            font-size: 15px
+
+        @media (min-width: $screen-lg)
+            font-size: 16px
+
+        @media (min-width: $screen-xl)
+            font-size: 17px
+
+        &::before
+            background-color: $color-red
+            border-radius: 50%
+            height: 32px
+            margin-right: 16px
+            width: 32px

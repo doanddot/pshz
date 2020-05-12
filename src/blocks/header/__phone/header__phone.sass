@@ -1,0 +1,20 @@
+.header__phone
+    display: none
+    white-space: nowrap
+
+    @media (min-width: 600px)
+        display: flex
+        margin-right: 12px
+
+    @media (min-width: $screen-md)
+        margin-right: 24px
+
+    @media (min-width: $screen-lg)
+        margin-right: 36px
+
+    @media (min-width: $screen-xl)
+        margin-right: 47px
+
+    &::before
+        content: url('./blocks/header/__phone/header__phone.svg')
+        padding: 8px 8px 7px 7px

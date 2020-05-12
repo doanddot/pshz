@@ -1,0 +1,44 @@
+- 
+    var products = [
+        {
+            src: require('./__image/our-products__image-01.png').default,
+            name: 'Щебень фр. 5-20 мм, лещадность <10 %' 
+        },
+        {
+            src: require('./__image/our-products__image-02.png').default,
+            name: 'Щебень фр. 20-40 мм, лещадность <15 %' 
+        },
+        {
+            src: require('./__image/our-products__image-03.png').default,
+            name: 'Щебень фр. 40-70 мм' 
+        },
+        {
+            src: require('./__image/our-products__image-04.png').default,
+            name: 'Щебень фр. 25-60 мм, лещадность <15 %' 
+        },
+        {
+            src: require('./__image/our-products__image-01.png').default,
+            name: 'Щебень фр. 5-20 мм, лещадность <10 %' 
+        },
+    ]
+
+section.our-products
+    div.container
+        div.row
+            div.our-products__column
+                div
+                    h2.our-products__heading Наша продукция
+                    p.our-products__subheading Основной компонент любого строительства
+                div
+                    a.button.our-products__link В каталог
+        div(style="position:relative")
+            ul.our-products__controls-container
+                li.our-products__control.our-products__control-prev
+                    img(src=require('./__control/our-products__control.png').default)
+                li.our-products__control.our-products__control-next
+                    img(src=require('./__control/our-products__control.png').default)
+            div.our-products__row
+                each product in products
+                    a.our-products__card(href='#')
+                        img.our-products__image(data-src=product.src)
+                        span.our-products__name= product.name

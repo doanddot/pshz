@@ -1,0 +1,41 @@
+.footer__column
+    align-items: flex-start
+    display: flex
+    flex: 1
+    padding:
+        left: 24px
+        right: 24px
+
+    @media (min-width: $screen-xl)
+        padding:
+            left: 42px
+            right: 42px
+
+    @media (min-width: 1666px)
+        padding:
+            left: 56px
+            right: 56px
+
+    &:first-of-type
+        max-width: 200px
+
+        @media (min-width: $screen-xl)
+            max-width: 302px
+
+        @media (min-width: 1666px)
+            max-width: 320px
+
+    &:not(:first-of-type)
+        margin-top: 24px
+
+        @media (min-width: $screen-md)
+            margin-top: 0
+
+    img
+        width: 24px
+
+        @media (min-width: $screen-xl)
+            width: 36px
+
+        @media (min-width: 1666px)
+            width: 47px

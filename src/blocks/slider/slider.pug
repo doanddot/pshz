@@ -1,0 +1,19 @@
+section.slider
+    ul.slider__controls-container
+        li.slider__control.slider__control-prev
+            img(src=require('./__control/slider__control.png').default)
+        li.slider__control.slider__control-next
+            img(src=require('./__control/slider__control.png').default)
+    div.slider__container
+        - for (var x = 0; x < 3; x++)
+            div.slider__item
+                img.tns-lazy-img(data-src=require('./slider.jpg').default width='100%')
+                div.container
+                    div.row
+                        div.col-xs-12
+                            span.slider__heading Качественный щебень от производителя на выгодных условиях
+                            p.slider__subheading в Пермском крае и близлежащих регионах РФ
+                            a.button.slider__button(href='#') Перейти
+    ul.slider__nav-container
+        - for (var x = 0; x < 3; x++)
+            button.slider__nav

@@ -1,0 +1,46 @@
+.cooperate__column
+    align-items: center
+    border:
+        bottom: 1px solid #e3e3e3
+        right: 1px solid #e3e3e3
+    display: flex
+    justify-content: center
+    padding:
+        bottom: 48px
+        top: 48px
+
+    @media (min-width: $screen-sm)
+        padding:
+            bottom: 52px
+            top: 52px
+
+    @media (min-width: $screen-md)
+        padding:
+            bottom: 56px
+            top: 56px
+
+    @media (min-width: $screen-lg)
+        padding:
+            bottom: 60px
+            top: 60px
+
+    @media (min-width: $screen-xl)
+        padding:
+            bottom: 64px
+            top: 64px
+
+    &:hover
+        background-color: $color-red
+        border: 1px solid $color-red
+        box-shadow: 1px 0px 0px 0px $color-red
+        margin:
+            left: -1px
+            top: -1px
+            right: 1px
+
+        .cooperate__icon
+            filter: invert(1)
+
+        .cooperate__name
+            color: #fff
+            text-decoration: underline

@@ -1,0 +1,33 @@
+.quality__heading
+    max-width: 264px
+
+    &::after
+        background:
+            image: url('../../blocks/quality/__heading/quality__heading.png')
+            repeat: no-repeat
+            size: contain
+        content: ''
+        display: block
+        height: 25.5px
+        margin-top: 20px
+        width: 26.5px
+
+        @media (min-width: $screen-sm)
+            height: 32px
+            margin-top: 25px
+            width: 35px
+
+        @media (min-width: $screen-md)
+            height: 39px
+            margin-top: 30px
+            width: 41px
+
+        @media (min-width: $screen-lg)
+            height: 45px
+            margin-top: 35px
+            width: 47px
+
+        @media (min-width: $screen-xl)
+            height: 51px
+            margin-top: 40px
+            width: 53px

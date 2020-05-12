@@ -1,0 +1,39 @@
+@import '__button/nav__button'
+@import '__button/_close/nav__button_close'
+@import '__item/nav__item'
+@import '__link/nav__link'
+@import '__link/_active/nav__link_active'
+@import '__list/nav__list'
+@import '__logo/nav__logo'
+
+.nav
+    background: linear-gradient(to right, rgba(17,17,17,.58), rgba(17,17,17,.58)), url('./blocks/nav/nav.jpg')
+    background-position: center
+    background-size: cover
+    display: flex
+    justify-content: flex-end
+    padding:
+        left: 16px
+        right: 16px
+    position: relative
+    z-index: 2
+
+    @media (min-width: $screen-md)
+        padding:
+            left: 24px
+            right: 24px
+
+    @media (min-width: $screen-lg)
+        padding:
+            left: 32px
+            right: 32px
+
+    @media (min-width: $screen-xl)
+        padding:
+            left: 48px
+            right: 48px
+
+    @media (min-width: 1366px)
+        padding:
+            left: 64px
+            right: 64px

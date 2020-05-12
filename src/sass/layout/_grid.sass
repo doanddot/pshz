@@ -1,0 +1,43 @@
+.container
+    margin:
+        left: auto
+        right: auto
+    padding:
+        left: 15px
+        right: 15px
+    width: 100%
+
+    @media (min-width: $screen-sm)
+        max-width: 540px
+
+    @media (min-width: $screen-md)
+        max-width: 720px
+
+    @media (min-width: $screen-lg)
+        max-width: 960px
+
+    @media (min-width: $screen-xl)
+        max-width: 1140px
+
+.row
+    display: flex
+    flex-wrap: wrap
+    margin:
+        left: -15px
+        right: -15px
+
+[class^='col-']
+    padding:
+        left: 15px
+        right: 15px
+    position: relative
+    width: 100%
+
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+
+@each $name, $screen in $breakpoints
+    @media (min-width: $screen)
+        @for $i from 1 through 12
+            .col-#{$name}-#{$i}
+                flex: 0 0 100% / 12 * $i
+                max-width: 100% / 12 * $i

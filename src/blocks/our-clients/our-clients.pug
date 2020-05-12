@@ -1,0 +1,21 @@
+-
+    var clients = [
+        require('./our-clients-01.png').default,
+        require('./our-clients-02.png').default,
+        require('./our-clients-03.png').default,
+        require('./our-clients-04.png').default,
+        require('./our-clients-05.png').default,
+        require('./our-clients-06.png').default,
+        require('./our-clients-07.png').default,
+        require('./our-clients-08.png').default
+    ]
+
+section.our-clients
+    div.container
+        div.row
+            div.col-xs-12
+                h2.heading-2 Наши клиенты
+        div.row.our-clients__row
+            each client in clients
+                div.col-xs-6.col-md-3.our-clients__column
+                    img.our-clients__image(src=client)

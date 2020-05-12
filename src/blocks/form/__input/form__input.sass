@@ -1,0 +1,21 @@
+.form__input
+    border:
+        color: transparent
+        radius: 28px
+        style: solid
+        width: 3px
+    display: block
+    font:
+        size: 16px
+        weight: 500
+    line-height: 1.25
+    max-width: 376px
+    padding: 17px 27px 13px
+    width: 100%
+
+    &:focus
+        border-color: #d9e0e4
+
+    &:focus ~ .form__label,
+    &:valid ~ .form__label
+            transform: scale(.66) translateY(-23px)

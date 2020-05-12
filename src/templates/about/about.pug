@@ -1,0 +1,9 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'about'
+
+block breadcrumbs    
+    +breadcrumbs('О заводе', {href: 'home.html', name: 'Главная'}, { href: '#', name: 'О ПЩЗ'})
+
+block main

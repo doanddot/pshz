@@ -1,0 +1,17 @@
+.header__address
+    display: none
+
+    @media (min-width: $screen-lg)
+        margin:
+            left: 27px
+            right: 57px
+
+    @media (min-width: 1244px)
+        display: flex
+        margin:
+            left: 35px
+            right: 75px
+
+    &::before
+        content: url('./blocks/header/__address/header__address.svg')
+        padding: 7px 9px 6px

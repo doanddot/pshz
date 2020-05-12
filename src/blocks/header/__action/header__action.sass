@@ -1,0 +1,35 @@
+.header__action
+    background-color: $color-red
+    color: #fff
+    border:
+        radius: 22px
+        width: 0
+    height: 32px
+    padding: 8px 16px
+    font:
+        size: 12px
+        weight: 500
+    line-height: .9
+    white-space: nowrap
+
+    transition: all 200ms ease-in-out
+
+    @media (min-width: $screen-sm)
+        font-size: 13px
+
+    @media (min-width: $screen-md)
+        height: 44px
+        padding: 12px 24px 12px 24px
+        font-size: 14px
+
+    @media (min-width: $screen-lg)
+        font-size: 15px
+
+    @media (min-width: $screen-xl)
+        font-size: 16px
+        padding: 14px 33px 14px 32px
+
+    &:hover
+        background-color: $color-yellow
+        color: #000
+        transform: scale(1.02)

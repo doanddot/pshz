@@ -18,48 +18,63 @@ module.exports = {
     },
 
     entry: {
-        contacts: './src/contacts.js',
-        index: './src/index.js',
+        about: './src/templates/about/about.js',
+        contacts: './src/templates/contacts/contacts.js',
+        home: './src/templates/home/home.js',
+        main: './src/main.js',
     },
 
-    mode: 'production',
+    mode: 'development',
 
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    }
+                }
+            },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: 'development'
-                        }
+                        options: { hmr: 'development' }
                     },
                     'css-loader',
                     'postcss-loader',
-                    'sass-loader'
+                    'sass-loader',
                 ]
-            }
-        ]   
+            },
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                query: { pretty: true }
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'assets',
+                }
+            },
+        ]
     },
 
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
 
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'contacts.html',
-            template: './contacts.html',
-            chunks: ['contacts']
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './index.html',
-            chunks: ['index']
-        }),
+        new HtmlWebpackPlugin({ chunks: ['about'], filename: 'about.html', minify: false, template: './src/templates/about/about.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['contacts'], filename: 'contacts.html', minify: false, template: './src/templates/contacts/contacts.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['home'], filename: 'home.html', minify: false, template: './src/templates/home/home.pug' }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),

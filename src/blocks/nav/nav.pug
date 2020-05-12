@@ -1,0 +1,23 @@
+nav.nav
+    a.nav__logo(href='home.html')        
+        img(src=require('./__logo/nav__logo.png').default)
+    ul.nav__list
+        li.nav__item
+            a.nav__link(href='#') О ПЩЗ
+            include ../submenu/submenu.pug
+        li.nav__item
+            a.nav__link(href='#') Каталог
+        li.nav__item
+            a.nav__link(href='#') Месторождение
+        li.nav__item    
+            a.nav__link(href='#') Сертификаты
+        li.nav__item    
+            a.nav__link(href='#') Как купить
+        li.nav__item    
+            a.nav__link(href='contacts.html') Контакты
+    button.nav__button
+        <svg width="20" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2H26" stroke="white" stroke-width="3"></path>
+            <path d="M0 10H26" stroke="white" stroke-width="3"></path>
+            <path d="M0 18H26" stroke="white" stroke-width="3"></path>
+        </svg>

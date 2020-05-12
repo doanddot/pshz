@@ -1,0 +1,31 @@
+.our-products__control
+    bottom: 50%
+    margin-bottom: -12px
+    position: absolute
+    opacity: .5
+    outline: none
+    z-index: 1
+
+
+
+    &:hover
+        opacity: 1
+
+    img
+        width: 16px
+
+        @media (min-width: $screen-md)
+            width: 24px
+
+    &-prev
+        left: -8px
+        transform: rotate(180deg)
+
+        @media (min-width: $screen-md)
+            left: -12px
+
+    &-next
+        right: -8px
+
+        @media (min-width: $screen-md)
+            right: -12px
