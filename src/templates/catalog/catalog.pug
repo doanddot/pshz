@@ -1,0 +1,46 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'product-catalog'
+
+block breadcrumbs    
+    +breadcrumbs('Каталог продукции', {href: 'home.html', name: 'Главная'})
+
+block main
+    -
+        var products = [
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <10 %' },
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <15 %' },
+            { src: '02', heading: 'Щебень фр. 20-40 мм' },
+            { src: '03', heading: 'Щебень фр. 40-70 мм' },
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <10 %' },
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <15 %' },
+            { src: '02', heading: 'Щебень фр. 20-40 мм' },
+            { src: '03', heading: 'Щебень фр. 40-70 мм' },
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <10 %' },
+            { src: '01', heading: 'Щебень фр. 5-20 мм, лещадность <15 %' },
+            { src: '02', heading: 'Щебень фр. 20-40 мм' },
+            { src: '03', heading: 'Щебень фр. 40-70 мм' },
+        ]
+    
+    section.catalog
+        .container
+            .row
+                each product in products
+                    a.catalog__col.col-xs-6.col-md-4.col-lg-3(href='product.html')
+                        img.catalog__thumbnail(src=require('./catalog-' + product.src + '.png').default) 
+                        span.catalog__heading= product.heading
+                        span.catalog__standart ГОСТ 8267-93
+                        .catalog__properties
+                            p Порода: 
+                                strong Габбро-Диабаз
+                            p Марка по прочности: 
+                                strong 1400
+                            p Лещадность: 
+                                strong <10%
+                            p Морозостойкость: 
+                                strong F300
+                        span.catalog__currency Цена руб./т. с учетом НДС
+                        span.catalog__price 500 ₽
+                    
+                    

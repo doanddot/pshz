@@ -37,7 +37,7 @@ html(lang='ru')
                 .container
                     .row
                         .col-xs-12
-                            h1.breadcrumbs__heading= heading
+                            span.breadcrumbs__heading= heading
                             ul.breadcrumbs__list
                                 each link in links
                                     li.breadcrumbs__item
@@ -55,7 +55,7 @@ html(lang='ru')
         // main end
         
         // footer start
-        include ./blocks/footer/footer.pug
+        //- include ./blocks/footer/footer.pug
         // footer end
         
         script(src='main.js')

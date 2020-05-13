@@ -3,6 +3,11 @@
     font:
         size: 13px
         weight: 500
+    white-space: nowrap
+
+    &:last-of-type
+        overflow: hidden
+        text-overflow: ellipsis
 
     &:not(:first-of-type)
         &::before

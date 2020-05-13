@@ -1,0 +1,21 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'reviews'
+
+block breadcrumbs    
+    +breadcrumbs('Отзывы', {href: 'home.html', name: 'Главная'}, { href: '#', name: 'О ПЩЗ'})
+
+block main
+    section.reviews__description
+        div.container
+            p Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе. 
+            p Благодаря вам мы становимся лучше
+            
+    // our-clients start
+    include ../../blocks/our-clients/our-clients.pug
+    // our-clients end
+    
+    // thanks start
+    include ../../blocks/thanks/thanks.pug
+    // thanks end

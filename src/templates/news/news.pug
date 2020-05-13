@@ -1,0 +1,35 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'news'
+
+block breadcrumbs    
+    +breadcrumbs('Новости и статьи', {href: 'home.html', name: 'Главная'}, { href: '#', name: 'О ПЩЗ'})
+
+block main
+    - 
+        var list = [
+            { src: 'news-02.jpg', date: '24.04.2020', heading: 'Проведена модернизация производственных мощностей' },
+            { src: 'news-02.jpg', date: '29.04.2020', heading: 'Виды щебня и его применение' },
+            { src: 'news-03.jpg', date: '21.03.2020', heading: 'Производство щебня: процедуры дробления и грохочения' },
+            { src: 'news-02.jpg', date: '29.03.2020', heading: 'Виды щебня и его применение' },
+            { src: 'news-03.jpg', date: '21.03.2020', heading: 'Производство щебня: процедуры дробления и грохочения' },
+            { src: 'news-04.jpg', date: '02.04.2020', heading: 'Характеристики гранитной крошки' },
+            { src: 'news-02.jpg', date: '29.03.2020', heading: 'Виды щебня и его применение' },
+            { src: 'news-04.jpg', date: '02.04.2020', heading: 'Характеристики гранитной крошки' },
+            { src: 'news-03.jpg', date: '21.03.2020', heading: 'Производство щебня: процедуры дробления и грохочения' },
+        ]
+    
+    div.news__list
+        div.container
+            div.row
+                each item in list
+                    div.col-xs-12.col-sm-6.col-lg-4.news__item
+                        a.news__thumbnail(href='article.html')
+                            img(src=require('../../assets/' + item.src).default width='100%')
+                        p.news__date= item.date
+                        a.news__heading(href='article.html')= item.heading
+            div.row
+                div.col-xs-12.news__col-button
+                    button.button.news__button-more 
+                        span Загрузить больше статей

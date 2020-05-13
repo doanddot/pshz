@@ -1,0 +1,14 @@
+section.thanks
+    div.container
+        div.row
+            div.col-xs-12
+                h2.heading-2 Нам выражают благодарность:
+                ul.thanks__controls-container
+                    li.thanks__control.thanks__control-prev
+                        img(src=require('./__control/thanks__control.png').default)
+                    li.thanks__control.thanks__control-next
+                        img(src=require('./__control/thanks__control.png').default)
+                div.thanks__slider
+                    - for (var x = 1; x < 6; x++)
+                        div.thanks__item
+                            img.tns-lazy-img(data-src=require('./thanks-thumbnail-0' + x + '.jpg').default data-big=require('./thanks-0' + x + '.jpg').default width='100%')

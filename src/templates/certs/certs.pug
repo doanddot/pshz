@@ -1,0 +1,26 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'certificates'
+
+block breadcrumbs    
+    +breadcrumbs('Сертификаты', {href: 'home.html', name: 'Главная'})
+
+block main
+    -
+        var certs = [
+            { src: '01', heading: 'Сертификат соответствия 5-10_10-15_10-20', href: '01' },
+            { src: '02', heading: 'Декларация о соответствии 5-10_10-15_10-20', href: '02' },
+            { src: '03', heading: 'Декларация о соответствии 5-10_10-15_10-20', href: '03' },
+            { src: '04', heading: 'Декларация о соответствии 5-20_20-40_40-70', href: '04' },
+            { src: '05', heading: 'Свидетельство о поверке весов вагонных', href: '05' },
+        ]
+    
+    section.certs
+        .container
+            .row
+                each cert in certs
+                    .certs__col.col-xs-6.col-md-4
+                        img.certs__thumbnail(src=require('./certs-thumbnail-' + cert.src + '.jpg').default)
+                        span.certs__heading= cert.heading
+                        a.button.certs__link(download href=require('./certs-' + cert.href + '.jpg').default target="_blank") Скачать

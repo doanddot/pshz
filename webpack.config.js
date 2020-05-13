@@ -19,8 +19,13 @@ module.exports = {
 
     entry: {
         about: './src/templates/about/about.js',
+        article: './src/templates/article/article.js',
+        catalog: './src/templates/catalog/catalog.js',
+        certs: './src/templates/certs/certs.js',
         contacts: './src/templates/contacts/contacts.js',
         home: './src/templates/home/home.js',
+        news: './src/templates/news/news.js',
+        reviews: './src/templates/reviews/reviews.js',
         main: './src/main.js',
     },
 
@@ -73,8 +78,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({ chunks: ['about'], filename: 'about.html', minify: false, template: './src/templates/about/about.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['article'], filename: 'article.html', minify: false, template: './src/templates/article/article.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['catalog'], filename: 'catalog.html', minify: false, template: './src/templates/catalog/catalog.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['certs'], filename: 'certs.html', minify: false, template: './src/templates/certs/certs.pug' }),
         new HtmlWebpackPlugin({ chunks: ['contacts'], filename: 'contacts.html', minify: false, template: './src/templates/contacts/contacts.pug' }),
         new HtmlWebpackPlugin({ chunks: ['home'], filename: 'home.html', minify: false, template: './src/templates/home/home.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['news'], filename: 'news.html', minify: false, template: './src/templates/news/news.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['reviews'], filename: 'reviews.html', minify: false, template: './src/templates/reviews/reviews.pug' }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),

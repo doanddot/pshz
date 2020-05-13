@@ -1,0 +1,27 @@
+@import ../../sass/abstracts/variables
+
+.catalog
+    padding:
+        bottom: 184px
+        top: 48px
+
+    .row
+        border:
+            top: 1px solid #e1e1e1
+            left: 1px solid #e1e1e1
+
+.catalog
+    &__heading,
+    &__standart,
+    &__properties,
+    &__currency,
+    &__price
+        max-width: 181px
+
+@import __col/catalog__col
+@import __currency/catalog__currency
+@import __heading/catalog__heading
+@import __price/catalog__price
+@import __properties/catalog__properties
+@import __standart/catalog__standart
+@import __thumbnail/catalog__thumbnail

@@ -1,11 +1,15 @@
 .article
-    &__item,
-    &__list,
-    &__paragraph
+    padding:
+        bottom: 104px
+        top: 16px
+
+    li,
+    ul,
+    p
         margin-top: 16px
 
-    &__list,
-    &__paragraph
+    ul,
+    p
         font:
             size: 13px
             weight: 400
@@ -17,9 +21,13 @@
         @media (min-width: $screen-xl)
             font-size: 15px
 
+@import __button-back/article__button-back
 @import __heading/article__heading
+@import __heading-line/article__heading-line
 @import __image/article__image
 @import __image/_center/article__image_center
+@import __image/_left/article__image_left
+@import __image/_right/article__image_right
 @import __item/article__item
 @import __list/article__list
 @import __paragraph/article__paragraph
