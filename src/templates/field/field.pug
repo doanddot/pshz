@@ -1,0 +1,49 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'field'
+
+block main
+    // first start
+    include ../../blocks/first/first.pug
+    // first end
+    
+    // reserve start
+    include ../../blocks/reserve/reserve.pug
+    // reserve end
+    
+    // characteristics start
+    include ../../blocks/characteristics/characteristics.pug
+    // characteristics end
+    
+    // way start
+    section.way
+        .container
+            .row
+                .col-xs-12.col-xl-6.way__col
+                    h2.heading-2 Способ разработки карьера:
+                .col-xs-12.col-xl-6.way__col
+                    p Для переработки габбро-диабазов требуется разрыхление горной породы. Бурение и взрыв осуществляется подрядной организацией ЗАО «Пермвзрывпром»
+    // way end
+    
+    // way-slider start
+    section.way-slider
+        ul.way-slider__controls-container
+            li.way-slider__control.way-slider__control-prev
+                div
+                    img(src=require('../../blocks/slider/__control/slider__control.png').default)
+            li.way-slider__control.way-slider__control-next
+                div
+                    img(src=require('../../blocks/slider/__control/slider__control.png').default)
+        section.way-slider__container
+            img(src=require('./way-01.jpg').default)
+            img(src=require('./way-02.jpg').default)
+            img(src=require('./way-01.jpg').default)
+            img(src=require('./way-02.jpg').default)
+            img(src=require('./way-01.jpg').default)
+            img(src=require('./way-02.jpg').default)
+    // wat-slider end
+    
+    // certs-docs start
+    include ../../blocks/certs-docs/certs-docs.pug
+    // certs-docs end

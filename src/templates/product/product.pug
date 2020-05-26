@@ -1,0 +1,54 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'product'
+    - var bButton = { href: 'catalog.html', title: 'Назад' }
+
+block breadcrumbs    
+    +breadcrumbs('Гравийный щебень фракций 5-20 мм', {href: 'home.html', name: 'Главная'}, { href: 'catalog.html', name: 'Каталог'})
+
+block main
+    section.product
+        .container
+            .row
+                .col-xs-12.col-md-6.col-lg-7
+                    img.product__image(src=require('./product.jpg').default)
+                .col-xs-12.col-md-6.col-lg-5
+                    .product__wrap
+                        span.product__currency Цена руб./т. с учетом НДС
+                        span.product__price 500 ₽
+                        button.button.product__button Заказать щебень
+                        a.product__cert(download href='#' target='_blank') Сертификат качества
+                    .product__applied
+                        span
+                            strong Применяется для:
+                        ul.product__list
+                            li.product__list-item Строительства дорог
+                            li.product__list-item Цемента
+    section.product__detail
+        .container
+            .row
+                .col-xs-12.col-lg-4
+                    .product__tech
+                        span ГОСТ 8267-93
+                        p Порода: 
+                            strong Габбро-Диабаз
+                        p Марка по прочности: 
+                            strong 1400
+                        p Лещадность: 
+                            strong <10%
+                        p Морозостойкость: 
+                            strong F300 
+                .col-xs-12.col-lg-8
+                    .product__tabs
+                        span.active(data-tab='description') Описание
+                        span(data-tab='characteristics') Характеристики
+                        span(data-tab='additionally') Дополнительно
+                        div.active(data-tab='description')
+                            p Размер зёрен колеблется от 5 до 20 мм. Такой размер позволяет добиваться идеального сцепления в смесях.  
+                            p Мелкая фракция щебня является наиболее востребованной. Она широко используется в производстве высокопрочного бетона и строительных конструкций из него, в фундаментных работах, для заливки мостового полотна, аэродромных и дорожных покрытий.
+                            p Щебень имеет кубовидную форму, что позволяет добиться максимальной плотности скелета при уплотнении, в следствии чего возрастает несущая способность конструкций.
+                        div(data-tab='characteristics')
+                            p characteristics
+                        div(data-tab='additionally')
+                            p additionally

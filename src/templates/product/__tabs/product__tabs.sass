@@ -1,0 +1,75 @@
+.product__tabs
+    margin-top: 32px
+
+    span
+        color: #7f8a8f
+        font:
+            size: 14px
+            weight: 600
+        cursor: pointer
+        margin-top: 16px
+
+        @media (min-width: $screen-sm)
+            font-size: 15px
+
+        @media (min-width: $screen-md)
+            font-size: 16px
+
+        @media (min-width: $screen-lg)
+            font-size: 17px
+
+        @media (min-width: $screen-xl)
+            font-size: 18px
+
+        &:not(:last-of-type)
+            margin-right: 20px
+
+            @media (min-width: $screen-sm)
+                margin-right: 25px
+
+            @media (min-width: $screen-md)
+                margin-right: 30px
+
+            @media (min-width: $screen-lg)
+                margin-right: 35px
+
+            @media (min-width: $screen-xl)
+                margin-right: 40px
+
+        &.active
+            color: #1c1c1c
+            font:
+                size: 16px
+                weight: bold
+
+            @media (min-width: $screen-sm)
+                font-size: 18px
+            @media (min-width: $screen-md)
+                font-size: 20px
+            @media (min-width: $screen-lg)
+                font-size: 22px
+            @media (min-width: $screen-xl)
+                font-size: 24px
+
+    div
+        display: none
+
+        &.active
+            display: block
+
+    p
+        font-size: 12px
+        margin-top: 40px
+        line-height: 1.6
+
+        @media (min-width: $screen-sm)
+            font-size: 13px
+
+        @media (min-width: $screen-md)
+            font-size: 14px
+
+        @media (min-width: $screen-lg)
+            font-size: 15px
+
+        @media (min-width: $screen-xl)
+            font-size: 16px

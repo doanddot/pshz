@@ -4,11 +4,26 @@
     padding:
         bottom: 184px
         top: 48px
+    position: relative
+
+    @media (min-width: $screen-lg)
+        display: flex
+
+    @media (min-width: 1780px)
+        display: block
 
     .row
         border:
             top: 1px solid #e1e1e1
             left: 1px solid #e1e1e1
+        margin-top: 48px
+
+    .container
+        @media (min-width: $screen-xl)
+            max-width: 100%
+
+        @media (min-width: 1780px)
+            max-width: 1140px
 
 .catalog
     &__heading,
@@ -17,6 +32,109 @@
     &__currency,
     &__price
         max-width: 181px
+
+    &__sort
+        display: flex
+
+    &__filter
+        border-color: transparent
+        background-color: #f4f8f9
+        margin-right: 18px
+        display: flex
+        border-radius: 50%
+        width: 46px
+        height: 46px
+        align-items: center
+        justify-content: center
+
+        @media (min-width: $screen-lg)
+            display: none
+
+        img
+            width: 18px
+
+.aside
+    background-color: #f9fbfd
+    display: none
+    margin-left: 15px
+    max-width: 287px
+    position: absolute
+    top: 112px
+
+    @media (min-width: $screen-sm)
+        margin-left: calc((100vw - 540px) / 2)
+
+    @media (min-width: $screen-md)
+        margin-left: calc((100vw - 720px) / 2)
+
+    @media (min-width: $screen-lg)
+        background-color: transparent
+        display: block
+        flex: 100%
+        margin-left: 18px
+        margin-right: 18px
+        position: sticky
+        top: 84px
+
+    @media (min-width: 1780px)
+        float: left
+        margin-left: calc(((100vw - 1140px) / 2) - 305px)
+
+    &_open
+        @media (max-width: 991px)
+            box-shadow: 0px 0px 24px 0px rgba(5, 6, 6, 0.12)
+            display: block
+            z-index: 2
+
+    &__type,
+    &__fractions
+        background-color: #f9fbfd
+        padding: 48px 32px
+
+    &__type
+
+        .form__checkbox
+            margin-top: 32px
+            margin-bottom: 0
+
+            &:first-of-type
+                margin-top: 0
+
+            label
+                align-items: center
+
+            span
+                font-size: 16px
+
+    &__fractions
+        margin-top: 18px
+
+        .form__input
+            border-color: #d9e0e4
+            height: 36px
+            margin-left: 12px
+            padding: 10px 15px
+
+    &__heading
+        font-size: 16px
+        font-weight: 600
+
+    &__field
+        align-items: center
+        display: flex
+        margin-top: 32px
+
+        span
+            font-size: 14px
+            font-weight: 600
+
+            &:last-of-type
+                margin-left: 12px
+
+@import ../../blocks/range/range
+@import ../../blocks/select/select
+@import ../../blocks/form/__checkbox/form__checkbox
+@import ../../blocks/form/__input/form__input
 
 @import __col/catalog__col
 @import __currency/catalog__currency

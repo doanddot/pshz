@@ -1,0 +1,20 @@
+section.characteristics
+    .container
+        .row
+            .col-xs-12
+                h2.heading-2 Характеристики камня
+                p.characteristics__subheading Диабаз является уникальной горной породой, по физико-механическим свойствам, не имеющей аналогов в других регионах России
+        .row.characteristics__row
+            - 
+                var chrcs = [
+                    { src: '01', span: 'Прочность М1400' },
+                    { src: '02', span: 'Нормы радиологической безопасности не более 370 кб/кг' },
+                    { src: '03', span: 'Содержание пылеватых и глинистых частиц менее 1%' },
+                    { src: '04', span: 'Морозостойкость от F300 и выше' },
+                    { src: '05', span: 'Лещадность менее 10%' },
+                    { src: '06', span: 'насыпная плотность от 1,41 до 1,58 т/м3' },
+                ]
+            each chrc in chrcs
+                .col-xs-12.col-sm-6.col-lg-4.characteristics__col
+                    img(src=require('./characteristics-' + chrc.src + '.png').default)
+                    span= chrc.span

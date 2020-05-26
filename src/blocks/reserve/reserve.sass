@@ -1,0 +1,117 @@
+.reserve
+    padding:
+        top: 156px
+        bottom: 128px
+
+    &__row
+        position: relative
+        flex-direction: column
+        margin-top: 48px
+
+        @media (min-width: $screen-lg)
+            flex-direction: row
+
+    hr
+        background: #5fc1d4
+        border: 0
+        position: absolute
+        left: 53px
+        margin: 0
+        top: 55px
+
+        @media (min-width: $screen-sm)
+            height: 469px
+            width: 12px
+
+        @media (min-width: $screen-md)
+            height: 385px
+
+        @media (min-width: $screen-lg)
+            height: 12px
+            left: 66px
+            width: 640px
+
+        @media (min-width: $screen-xl)
+            width: 760px
+
+
+    &__col
+        padding:
+            right: 44px
+            left: 44px
+
+        @media (min-width: $screen-sm)
+            padding-left: 88px
+
+        @media (min-width: $screen-lg)
+            padding:
+                right: 44px
+                bottom: 88px
+                left: 44px
+
+        &::before
+            background-color: white
+            border: 12px solid #5fc1d4
+            border-radius: 50%
+            content: ''
+            display: none
+            height: 44px
+            margin:
+                left: -66px
+                bottom: 24px
+                top: 24px
+            position: absolute
+            width: 44px
+
+            @media (min-width: $screen-sm)
+                display: block
+
+            @media (min-width: $screen-lg)
+                margin-left: 0
+                position: relative
+
+        &:first-of-type
+            border-left: 15px solid transparent
+            padding-top: 12px
+            padding-bottom: 44px
+
+            @media (min-width: $screen-lg)
+                padding-top: 0
+                border:
+                    top: 15px solid transparent
+                    left: none
+
+        &_left
+            border:
+                top: 15px solid #eef5f7
+                right: 15px solid #eef5f7
+                left: 15px solid #eef5f7
+            padding:
+                top: 12px
+
+            @media (min-width: $screen-lg)
+                padding-top: 0
+                border:
+                    right: none
+                    bottom: 15px solid #eef5f7
+
+        &_right
+            border:
+                left: 15px solid #eef5f7
+                bottom: 15px solid #eef5f7
+                right: 15px solid #eef5f7
+            padding:
+                top: 12px
+                bottom: 44px
+
+            @media (min-width: $screen-lg)
+                padding-top: 0
+                border:
+                    left: none
+                    top: 15px solid #eef5f7
+        p
+            font:
+                size: 14px
+                weight: 500
+            line-height: 2
+            margin-top: 32px

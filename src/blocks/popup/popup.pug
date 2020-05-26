@@ -3,11 +3,38 @@ div.popup.popup_closed
         button.popup__close
             img(src=require('./__close/popup__close.png').default width=38)
         span.popup__heading Оставить заявку
-        form.form.popup__form
-            div.form__field
-                input.form__input.popup__input(id='name' required type='name')
-                label.form__label(for='name') Ваше имя
-            div.form__field
-                input.form__input.popup__input(id='tel' required type='tel')
-                label.form__label(for='tel') Контактный номер
-            input.button.form__submit.popup__submit(type='submit' value='Отправить')
+        span.popup__subheading Желаемая должность: 
+            span
+        form.form.popup__form(action='test.php' enctype="multipart/form-data")
+            div.row
+                div.col-xs-12.col-lg-6
+                    div.form__field
+                        input.form__input.popup__input(id='name' name='name' required type='name')
+                        label.form__label(for='name') Ваше имя
+                    div.form__field
+                        input.form__input.popup__input(id='tel' name='tel' required type='tel')
+                        label.form__label(for='tel') Контактный номер
+                    div.form__field.form_vacancies
+                        input.form__input.popup__input(id='mail' name='mail' type='email' disabled placeholder='E-mail')
+                        label.form__label(for='mail') E-mail
+                div.col-xs-12.col-lg-6
+                    div.form__field.form_vacancies
+                        textarea.form__input.popup__input(id='message' name='message' disabled placeholder='Дополнительная информация')
+                        label.form__label(for='message') Дополнительная информация
+                div.col-xs-12.col-lg-6
+                    div.form__field.form_vacancies
+                        span.form__upload-title Файл с резюме
+                        label(for='upload') 
+                            div.button.form__upload-button Выберите файл
+                            span.form__upload-file Файл не выбран
+                        input.form__input(type='file' id='upload' name='upload' disabled)
+                div.col-xs-12.col-lg-6
+                    div.form__checkbox
+                        input(type="checkbox" id="assign" name='assign' checked)
+                        label(for='assign') 
+                            span Я согласен на 
+                                a(href='#') обработку персональных данных
+                    input.button.form__submit.popup__submit(type='submit' value='Отправить')
+        div.popup__success
+            img(src=require('./__notification/popup__notification.png').default)
+            p Ваша заявка успешно отправлена!

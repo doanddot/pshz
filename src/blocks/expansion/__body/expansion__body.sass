@@ -1,0 +1,35 @@
+.expansion__body
+    align-items: flex-start
+    display: flex
+    justify-content: space-between
+    font-size: 15px
+    line-height: 1.6
+    padding: 0 39px 26px 39px
+    margin-top: -26px
+    flex-direction: column-reverse
+
+    @media (min-width: $screen-md)
+        flex-direction: row
+
+    p
+        font-weight: 600
+        margin-top: 32px
+
+    ul
+        margin-top: 32px
+
+        li
+            align-items: center
+            display: flex
+            font-weight: 500
+
+            &::before
+                background-color: #3d82bb
+                border-radius: 50%
+                content: ''
+                display: block
+                margin:
+                    left: 4px
+                    right: 24px
+                height: 4px
+                width: 4px

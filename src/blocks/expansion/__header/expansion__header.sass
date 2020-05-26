@@ -1,0 +1,43 @@
+.expansion__header,
+.expansion__header div
+    display: flex
+
+.expansion__header
+    align-items: center
+    cursor: pointer
+    position: relative
+    padding: 26px 20px
+
+    @media (min-width: $screen-md)
+        padding: 26px 39px
+
+    div
+        flex: 1
+        justify-content: space-between
+        margin-right: 20px
+        flex-direction: column
+
+        @media (min-width: $screen-md)
+            flex-direction: row
+            margin-right: 40px
+
+.expansion__title
+    color: #3d82bb
+    overflow: hidden
+    text-overflow: ellipsis
+    font:
+        size: 12px
+        weight: 600
+    text-decoration: underline
+    white-space: nowrap
+
+    @media (min-width: $screen-md)
+        font-size: 17px
+
+.expansion__price
+    font-size: 12px
+    font-weight: bold
+    margin-top: 4px
+
+    @media (min-width: $screen-md)
+        font-size: 17px

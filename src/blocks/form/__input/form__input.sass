@@ -18,4 +18,16 @@
 
     &:focus ~ .form__label,
     &:valid ~ .form__label
-            transform: scale(.66) translateY(-23px)
+        transform: scale(.66) translateY(-23px)
+
+.form__input:not(:required)
+
+    &:placeholder-shown ~ .form__label
+        transform: scale(1) translateY(0)
+
+    &:placeholder-shown:focus ~ .form__label,
+    &:not(:placeholder-shown) ~ .form__label
+        transform: scale(.66) translateY(-23px)
+
+.form__input::placeholder
+    color: transparent

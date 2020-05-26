@@ -1,6 +1,8 @@
 header.header
-    button.header__price Скачать прайс
-    a.header__vacancies(href="#") Вакансии
+    a.header__logo(href='home.html' style='display: none')
+        img(src=require('../nav/__logo/nav__logo.png').default)
+    a.header__price(href=require('./price.pdf').default download target='_blank') Скачать прайс
+    a.header__vacancies(href="vacancies.html") Вакансии
     span.header__address г. Пермь, ул. Петропавловская, д. 41, офис 220
     div.header__wrap
         a.header__phone(href='tel:+73422590052') +7 (342) 259-00-52

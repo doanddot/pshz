@@ -1,0 +1,59 @@
+.first
+    background-color: rgba(17, 17, 17, .58)
+    height: 707px
+    margin-top: -64px
+    overflow: hidden
+    padding:
+        top: 96px
+        bottom: 96px
+    position: relative
+
+    @media (min-width: $screen-md)
+        padding-top: 144px
+        padding-bottom: 96px
+        margin-top: -96px
+    @media (min-width: $screen-lg)
+        padding-top: 192px
+        padding-bottom: 128px
+        margin-top: -128px
+
+    .container,
+    .row
+        height: 100%
+
+    &__col
+        align-items: center
+        display: flex
+        justify-content: center
+
+    &__background
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+
+    &__container
+        display: flex
+        align-items: flex-start
+        padding: 15px 0
+
+    &__thumbnail
+        margin-right: 40px
+
+    &__numeral,
+    &__body
+        color: #fff
+
+    &__numeral
+        font:
+            size: 50px
+            weight: bold
+
+    &__body
+        font:
+            size: 20px
+            weight: 500
+        margin-top: 24px
+        width: 226px

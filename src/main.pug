@@ -37,7 +37,13 @@ html(lang='ru')
                 .container
                     .row
                         .col-xs-12
-                            span.breadcrumbs__heading= heading
+                            div.breadcrumbs__heading_line
+                                span.breadcrumbs__heading= heading
+                                if bButton
+                                    if bodyClass == 'product-catalog'
+                                        a.button.breadcrumbs__button(href=bButton.href download target='_blank')= bButton.title
+                                    else
+                                        a.button.breadcrumbs__button(href=bButton.href)= bButton.title
                             ul.breadcrumbs__list
                                 each link in links
                                     li.breadcrumbs__item
@@ -55,7 +61,7 @@ html(lang='ru')
         // main end
         
         // footer start
-        //- include ./blocks/footer/footer.pug
+        include ./blocks/footer/footer.pug
         // footer end
         
         script(src='main.js')

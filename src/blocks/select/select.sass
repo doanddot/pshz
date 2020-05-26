@@ -1,0 +1,49 @@
+.select,
+.select__options
+    background-color: #f4f8f9
+    border-radius: 23px
+    width: 274px
+
+.select
+    cursor: pointer
+    position: relative
+
+    span,
+    &__option
+        font-size: 14px
+        padding: 16px 27px 16px
+
+    span
+        display: flex
+        justify-content: space-between
+        font-weight: 600
+        position: relative
+        z-index: 2
+
+        &::after
+            content: url('../../blocks/select/arrow.png')
+            transition: all 200ms ease-in-out
+            transform: rotate(180deg)
+
+    &__options
+        display: none
+        overflow: hidden
+        padding-top: 46px
+        position: absolute
+        top: 0
+        z-index: 1
+
+    &__option
+        font-weight: 500
+
+        &_active,
+        &:hover
+            background-color: #eaf0f2
+
+.select_open
+
+    span::after
+        transform: rotate(0)
+
+    .select__options
+        display: block

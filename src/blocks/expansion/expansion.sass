@@ -1,0 +1,27 @@
+.expansion
+    border:
+        right: 1px solid #e3e3e3
+        bottom: 1px solid #e3e3e3
+        left: 1px solid #e3e3e3
+    height: 79px
+    overflow: hidden
+    transition: all 200ms ease-in-out
+
+    &_open
+        background-color: #f7fafc
+
+        .expansion__title
+            color: #000
+            text-decoration: none
+
+        .expansion__indicator
+            background-color: #74a6ce
+            transform: rotate(0deg)
+
+            img
+                filter: invert(1)
+
+@import __body/expansion__body
+@import __button/expansion__button
+@import __header/expansion__header
+@import __indicator/expansion__indicator

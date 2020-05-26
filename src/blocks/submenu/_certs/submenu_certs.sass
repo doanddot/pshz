@@ -1,0 +1,13 @@
+.submenu_certs
+    .submenu__list
+        @media (min-width: $screen-lg)
+            margin-left: -25%
+            margin-right: 25%
+
+    .submenu__item:first-of-type:hover::before
+        @media (min-width: $screen-lg)
+            margin-left: calc(50% + 4px)
+        @media (min-width: $screen-xl)
+            margin-left: calc(50% + 3px)
+        @media (min-width: 1366px)
+            margin-left: calc(50% + 1px)

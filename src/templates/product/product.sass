@@ -1,0 +1,51 @@
+@import ../../sass/abstracts/variables
+
+body .product
+    padding:
+        top: 56px
+        bottom: 80px
+
+.product
+    &__currenct,
+    &__price
+        display: block
+
+    &__currency
+        font:
+            size: 20
+            weight: 700
+
+    &__price
+        font:
+            size: 38px
+            weight: 800
+        margin-top: 18px
+
+    &__list
+        font-size: 16px
+        margin-top: 16px
+
+        &-item
+            align-items: center
+            display: flex
+            font-weight: 500
+            line-height: 2
+
+            &::before
+                background-color: #21bdd6
+                border-radius: 2px
+                content: ''
+                display: block
+                height: 4px
+                margin-right: 24px
+                width: 11px
+
+
+@import __applied/product__applied
+@import __button/product__button
+@import __cert/product__cert
+@import __detail/product__detail
+@import __image/product__image
+@import __tabs/product__tabs
+@import __tech/product__tech
+@import __wrap/product__wrap

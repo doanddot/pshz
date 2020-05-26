@@ -1,0 +1,19 @@
+section.certs-docs
+    .container
+        .row
+            .col-xs-12
+                h2.heading-2 Лицензии и сертификаты:
+                ul.certs-docs__controls-container
+                    li.certs-docs__control.certs-docs__control-prev
+                        div
+                            img(src=require('../../blocks/certs-docs/certs-docs__control.png').default)
+                    li.certs-docs__control.certs-docs__control-next
+                        div
+                            img(src=require('../../blocks/certs-docs/certs-docs__control.png').default)
+                div.certs-docs__slider
+                    - for (var x = 1; x < 5; x++)
+                        div.certs-docs__item
+                            img.tns-lazy-img(data-src=require('./certs-docs-thumb-0' + x + '.jpg').default data-big=require('./certs-docs-0' + x + '.jpg').default width='100%')
+                            p Сертификат соответствия 5-10_10-15_10-20
+                            a.button Скачать
+                            

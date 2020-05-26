@@ -1,0 +1,24 @@
+extends ../../main.pug
+
+block variables
+    - var bodyClass = 'vacancies'
+    
+block breadcrumbs    
+    +breadcrumbs('Вакансии', {href: 'home.html', name: 'Главная'})
+
+block main
+    include ../../blocks/expansion/expansion.pug
+    
+    section.vacancies
+        .container
+            .row
+                .col-xs-12
+                    h2.vacancies__heading Отдел продаж
+                    .vacancies__accordion
+                        +expansion
+                        +expansion
+                    h2.vacancies__heading Рабочий персонал
+                    .vacancies__accordion
+                        +expansion
+                        +expansion
+                        +expansion

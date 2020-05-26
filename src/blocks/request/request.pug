@@ -4,9 +4,9 @@ section.request
         span.request__heading Оставьте заявку, и мы свяжемся с вами для обуждения условий сотрудничества, подходящих вам
         form.form.request__form
             div.form__field
-                input.form__input(id='name' required type='name')
+                input.form__input(id='name' name='name' required type='name')
                 label.form__label(for='name') ФИО
             div.form__field
-                input.form__input(id='tel' required type='tel')
+                input.form__input(id='tel' name='tel' required type='tel')
                 label.form__label(for='tel') Контактный номер
             input.button.form__submit.request__submit(type='submit' value='Начать сотрудничество!')

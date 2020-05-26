@@ -23,9 +23,15 @@ module.exports = {
         catalog: './src/templates/catalog/catalog.js',
         certs: './src/templates/certs/certs.js',
         contacts: './src/templates/contacts/contacts.js',
+        docs: './src/templates/docs/docs.js',
+        field: './src/templates/field/field.js',
         home: './src/templates/home/home.js',
+        'how-to-buy': './src/templates/how-to-buy/how-to-buy.js',
         news: './src/templates/news/news.js',
+        process: './src/templates/process/process.js',
+        product: './src/templates/product/product.js',
         reviews: './src/templates/reviews/reviews.js',
+        vacancies: './src/templates/vacancies/vacancies.js',
         main: './src/main.js',
     },
 
@@ -61,7 +67,7 @@ module.exports = {
                 query: { pretty: true }
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|pdf|docx)$/i,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'assets',
@@ -82,9 +88,15 @@ module.exports = {
         new HtmlWebpackPlugin({ chunks: ['catalog'], filename: 'catalog.html', minify: false, template: './src/templates/catalog/catalog.pug' }),
         new HtmlWebpackPlugin({ chunks: ['certs'], filename: 'certs.html', minify: false, template: './src/templates/certs/certs.pug' }),
         new HtmlWebpackPlugin({ chunks: ['contacts'], filename: 'contacts.html', minify: false, template: './src/templates/contacts/contacts.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['docs'], filename: 'docs.html', minify: false, template: './src/templates/docs/docs.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['field'], filename: 'field.html', minify: false, template: './src/templates/field/field.pug' }),
         new HtmlWebpackPlugin({ chunks: ['home'], filename: 'home.html', minify: false, template: './src/templates/home/home.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['how-to-buy'], filename: 'how-to-buy.html', minify: false, template: './src/templates/how-to-buy/how-to-buy.pug' }),
         new HtmlWebpackPlugin({ chunks: ['news'], filename: 'news.html', minify: false, template: './src/templates/news/news.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['process'], filename: 'process.html', minify: false, template: './src/templates/process/process.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['product'], filename: 'product.html', minify: false, template: './src/templates/product/product.pug' }),
         new HtmlWebpackPlugin({ chunks: ['reviews'], filename: 'reviews.html', minify: false, template: './src/templates/reviews/reviews.pug' }),
+        new HtmlWebpackPlugin({ chunks: ['vacancies'], filename: 'vacancies.html', minify: false, template: './src/templates/vacancies/vacancies.pug' }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),

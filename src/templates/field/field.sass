@@ -1,0 +1,106 @@
+@import ../../sass/abstracts/variables
+
+.field
+    .nav
+        background: transparent
+
+@import ../../blocks/first/first
+@import ../../blocks/reserve/reserve
+@import ../../blocks/characteristics/characteristics
+
+.way
+    background-color: $color-red
+    padding:
+        top: 80px
+        bottom: 80px
+
+    &__col
+        align-items: center
+        display: flex
+        padding:
+            top: 15px
+            bottom: 15px
+
+    h2, p
+        color: #fff
+
+    h2
+        font-size: 50px
+        line-height: 1.2
+
+    p
+        font:
+            size: 18px
+            weight: 400
+        line-height: 1.66
+
+@import https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css
+
+
+.way-slider
+    position: relative
+
+    &__control
+        align-items: center
+        background: rgba(0, 0, 0, .4)
+        display: none
+        outline: none
+        position: absolute
+
+        bottom: 0
+        top: 0
+        z-index: 1
+
+        @media (min-width: 768px)
+            display: flex
+            width: 120px
+        @media (min-width: 992px)
+            width: 180px
+        @media (min-width: 1200px)
+            width: 240px
+        @media (min-width: 1440px)
+            width: 300px
+        @media (min-width: 1600px)
+            width: 360px
+
+        div
+            align-items: center
+            display: flex
+            cursor: pointer
+            justify-content: center
+            border: 4px solid white
+            border-radius: 50%
+            height: 60px
+            opacity: .5
+            width: 60px
+
+            &:hover
+                opacity: 1
+
+        img
+            width: 17px
+
+        &-prev
+            justify-content: flex-end
+            left: 0
+
+            div
+                transform: rotate(180deg)
+
+                @media (min-width: 768px)
+                    margin-right: 28px
+                @media (min-width: 992px)
+                    margin-right: 56px
+
+        &-next
+            justify-content: flex-start
+            right: 0
+
+            div
+
+                @media (min-width: 768px)
+                    margin-left: 28px
+                @media (min-width: 992px)
+                    margin-left: 56px
+
+@import ../../blocks/certs-docs/certs-docs

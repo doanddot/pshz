@@ -47,8 +47,18 @@ input[type="submit"]
 
     -webkit-appearance: button
 
-input
+input[type='submit']:disabled
+    background: grey
+    color: white !important
+
+    &:hover
+        transform: none
+
+input, textarea
     outline: none
+
+textarea
+    resize: none
 
 img
     display: block

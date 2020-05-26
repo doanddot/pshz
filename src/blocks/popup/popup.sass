@@ -16,8 +16,74 @@
 
     z-index: 4
 
+    input[type='file']
+        display: none
+
+    label[for='upload']
+        align-items: center
+        display: flex
+        margin-top: 16px
+
+    .col-lg-6
+        flex: 0 0 100%
+        max-width: 100%
+
 @import __close/popup__close
 @import __dialog/popup__dialog
+
+.popup__subheading
+    display: none
+    font-size: 16px
+    font-weight: bold
+    margin-top: 40px
+
+    span
+        font-weight: 500
+        text-transform: lowercase
+
+.popup__vacancies
+    max-width: 935px
+
+    @media (min-width: $screen-lg)
+        .col-lg-6
+            flex: 0 0 50%
+            max-width: 50%
+
+    .form_vacancies
+        display: block
+
+    .popup__subheading
+        display: block
+
+.popup__success
+    display: none
+
+    img, p
+        margin:
+            top: 32px
+            left: auto
+            right: auto
+
+    p 
+        font-size: 18px
+        font-weight: 500
+        line-height: 1.6
+        max-width: 210px
+        text-align: center
+
+.popup__notification
+    max-width: 454px
+
+    .popup
+        &__heading,
+        &__subheading,
+        &__form
+            display: none
+
+        &__success
+            display: block
+    
+
 @import __form/popup__form
 @import __heading/popup__heading
 @import __input/popup__input

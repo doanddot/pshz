@@ -7,3 +7,40 @@ block breadcrumbs
     +breadcrumbs('Контакты', {href: 'home.html', name: 'Главная'})
 
 block main
+    section.contacts
+        .container
+            .row
+                .col-xs-12.col-lg-6
+                    div.contacts__manager
+                        h3.contacts__heading Наши менеджеры
+                        p.contacts__name Максим
+                        p.contacts__phone
+                            img(src=require('./phone.png').default)
+                            a(href='tel:+79028319726') <strong>+7 (902) 831-97-26</strong>
+                        p.contacts__mail
+                            img(src=require('./mail.png').default)
+                            a(href='mailto:pshz59@mail.ru') pshz59@mail.ru
+                        p.contacts__name Юрий
+                        p.contacts__phone
+                            img(src=require('./phone.png').default)
+                            a(href='tel:+79125904304') <strong>+7 (912) 590-43-04</strong>
+                        p.contacts__mail
+                            img(src=require('./mail.png').default)
+                            a(href='mailto:pshz59@mail.ru') pshz59@mail.ru
+                .col-xs-12.col-lg-6
+                    div.contacts__column
+                        h3.contacts__heading Офис
+                        p.contacts__geo
+                            img(src=require('./geo.png').default)
+                            span 614000, г. Пермь, ул. Петропавловская, д.41, офис 220.
+                        p.contacts__phone
+                            img(src=require('./phone.png').default)
+                            a(href='tel:+73422590052') <strong>+7 (342) 259-00-52</strong>
+                        p.contacts__mail
+                            img(src=require('./mail.png').default)
+                            a(href='mailto:pshz59@mail.ru') psсhz@gmail.ru
+                        h3.contacts__heading.contacts__heading_margin Завод
+                        p.contacts__geo
+                            img(src=require('./geo.png').default)
+                            span 618870, Пермский край, Горнозаводский район, рабочий поcелок Теплая гора, ул. Советская, 5, помещение 18
+                        a.contacts__link(href=require('./schema.pdf').default download target='_blank') Загрузить схему проезда
