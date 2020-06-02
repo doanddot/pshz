@@ -84,7 +84,6 @@ function send(form) {
   var xhr = new XMLHttpRequest()
 
   xhr.open('POST', form.action, false)
-  xhr.setRequestHeader('Content-Type', 'multipart/form-data');
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
   var formData = new FormData(form)
